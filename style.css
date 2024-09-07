@@ -1,0 +1,98 @@
+/* =============== CSS COMMON START =================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+ul,ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+/* .container{
+    width: 1170px;
+    margin: auto;
+} */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* =============== CSS COMMON END =================== */
+body{
+    height: 4000px;
+}
+.scroll{
+    width: 60px;
+    height: 60px;
+    background: conic-gradient(#192a56 , red);
+    border-radius: 50%;
+    position: fixed;
+    top: 98%;
+    left: 99%;
+    transform: translate(-98%, -99%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scroll.active2{
+    position: fixed;
+    bottom: 0;
+}
+.scroll .sub a{
+    display: inline-block;
+    /* justify-content: center;
+    align-items: center; */
+    line-height: 60px;
+    color: orange;
+    top: 50%;
+    left: 50%;
+    transform: translate(48%, -16%);
+    font-size: 20px;
+}
+.sub{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+nav{
+    background-color: #ccc;
+    box-shadow: 4px 4px 20px #f5bdbd;
+    width: 100%;
+    padding: 25px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    padding: 0 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+nav.active{
+    position: fixed;
+    top: 0;
+    animation: animate 1s linear;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
